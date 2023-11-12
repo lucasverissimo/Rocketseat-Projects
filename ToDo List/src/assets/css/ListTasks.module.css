@@ -1,0 +1,26 @@
+.empty_list {
+    padding: 4rem 1.5rem;
+    border-radius: 0.5rem;
+    border-top: 1px solid var(--gray-300);
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.empty_list img {
+    margin-bottom: 1rem;
+}
+
+.empty_list p {
+    line-height: 140%;
+    color: var(--gray-300);
+    text-align: center;
+}
+
+/***** list tasks *****/
+
+.list_tasks {
+    margin-top: 1.5rem;
+}

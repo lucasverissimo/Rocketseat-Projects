@@ -1,0 +1,83 @@
+.task {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--gray-500);
+    border: 1px solid var(--gray-400);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.task + .task {
+    margin-top: 0.75rem;
+}
+
+.task .checkbox_task .uncheck_task {
+    width: 1.091rem;
+    height: 1.091rem;
+    box-sizing: border-box;
+    border: 2px solid var(--blue);
+    border-radius: 100rem;
+    cursor: pointer;
+}
+
+.task .checkbox_task .check_task {
+    width: 1.091rem;
+    height: 1.091rem;
+    box-sizing: border-box;
+    border: 2px solid var(--purple-dark);
+    border-radius: 100rem;
+    cursor: pointer;
+    background-color: var(--purple-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task .checkbox_task .check_task img {
+    width: 80%;
+    height: auto;
+}
+
+.task .checkbox_task .uncheck_task img {
+    display: none;
+}
+
+.task .description_task,
+.task .description_task_finished {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.task .description_task p {
+    line-height: 140%;
+    color: var(--gray-100);
+    font-size: 0.875rem;
+}
+
+.task .description_task_finished p {
+    text-decoration: line-through;
+    color: var(--gray-300);
+    font-size: 0.875rem;
+    line-height: 140%;
+}
+
+.task .remove_task .btn_remove_task {
+    cursor: pointer;
+    width: 1.091rem;
+    height: 1.091rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    border-radius: 4px;
+}
+
+.task .remove_task .btn_remove_task:hover {
+    background-color: var(--gray-400);
+}
+
+.task .remove_task .btn_remove_task:hover svg path {
+    color: var(--danger);
+    fill: var(--danger);
+}
+

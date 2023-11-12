@@ -1,0 +1,35 @@
+main .container {
+    width: 46rem;
+    max-width: 98%;
+    margin: auto;
+    margin-top: -1.688rem;
+}
+
+header.top_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+
+header.top_list .info_top_list strong {
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+}
+
+header.top_list .info_top_list span {
+    font-size: 0.75rem;
+    color: var(--gray-200);
+    background-color: var(--gray-400);
+    border-radius: 999rem;
+    padding: 0.2rem 0.65rem;
+}
+
+header.top_list .info_top_list strong.color_created_tasks {
+    color: var(--blue);
+}
+
+header.top_list .info_top_list strong.color_done_tasks {
+    color: var(--purple);
+}
