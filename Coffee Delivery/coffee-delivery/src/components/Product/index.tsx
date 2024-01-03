@@ -8,6 +8,8 @@ import {
   ProductBuy,
 } from './style'
 
+import { ShoppingCart } from '@phosphor-icons/react'
+
 import ImageExample from '../../assets/coffe-example.png'
 
 export function Product() {
@@ -26,6 +28,16 @@ export function Product() {
           <div className="price">
             <span className="currency">R$</span>
             9,90
+          </div>
+          <div className="add_cart">
+            <div className="qtd">
+              <span className="minus">-</span>
+              <input type="text" value="1" disabled />
+              <span className="plus">+</span>
+            </div>
+            <button className="add">
+              <ShoppingCart size={25} color={'#fff'} />
+            </button>
           </div>
         </ProductBuy>
       </ProductInsideContainer>

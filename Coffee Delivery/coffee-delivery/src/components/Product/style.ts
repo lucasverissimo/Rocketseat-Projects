@@ -75,4 +75,44 @@ export const ProductBuy = styled.div`
       margin-right: 0.3125rem;
     }
   }
+
+  div.add_cart {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    div.qtd {
+      background-color: ${(props) => props.theme['base-button']};
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      input[type='text'] {
+        background: transparent;
+        padding: 13px;
+        width: 30px;
+        height: auto;
+        text-align: center;
+        border: 0;
+      }
+
+      span {
+        font-size: 1.2rem;
+        color: ${(props) => props.theme.purple};
+        width: 20px;
+        cursor: pointer;
+      }
+    }
+
+    button.add {
+      border-radius: 6px;
+      background-color: ${(props) => props.theme['purple-dark']};
+      padding: 7px;
+      border: 0;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
 `
