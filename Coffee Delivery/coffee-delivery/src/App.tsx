@@ -5,11 +5,15 @@ import { Router } from './Router'
 import { defaultTheme } from './styles/themes/default'
 import { GlobalStyles } from './styles/global'
 
+import { AppContextProvider } from './contexts/AppContext'
+
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <BrowserRouter>
-        <Router />
+        <AppContextProvider>
+          <Router />
+        </AppContextProvider>
       </BrowserRouter>
       <GlobalStyles />
     </ThemeProvider>

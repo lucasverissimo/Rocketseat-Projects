@@ -64,7 +64,7 @@ export const ProductBuy = styled.div`
 
   div.price {
     color: ${(props) => props.theme['base-text']};
-    font-size: ${(props) => props.theme['title-m']};
+    font-size: ${(props) => props.theme['text-m']};
     font-weight: bold;
 
     span.currency {
@@ -91,7 +91,7 @@ export const ProductBuy = styled.div`
 
       input[type='text'] {
         background: transparent;
-        padding: 13px;
+        padding: 13px 5px;
         width: 30px;
         height: auto;
         text-align: center;

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { CenterContainer, TitleSection } from '../../styles/global'
 
 export const CenterContainerFlex = styled(CenterContainer)`
@@ -83,7 +83,36 @@ export const ButtonPaymentContainer = styled.section`
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  .btn-active {
+    border: 1px solid ${({ theme }) => theme['purple-dark']};
+    background: ${({ theme }) => theme['purple-light']};
+  }
 `
 
-export const ButtonPayment = styled.button``
+export const ButtonPayment = styled.button`
+  width: 30%;
+  height: auto;
+  padding: 15px 10px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  ${({ theme }) => css`
+    color: ${theme['base-text']};
+    font-size: ${theme['text-s']};
+    background: ${theme['base-button']};
+  `}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .iconBtnBuy {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    color: ${({ theme }) => theme.purple};
+  }
+`

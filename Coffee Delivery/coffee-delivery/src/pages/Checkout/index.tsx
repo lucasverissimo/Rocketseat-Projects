@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { ColumnContainer } from '../../components/ColumnContainer'
 import {
   CenterContainerFlex,
@@ -26,6 +27,20 @@ import {
 } from '@phosphor-icons/react'
 
 export function Checkout() {
+  const [paymentSelected, setPaymentSelected] = useState('')
+
+  function handleSetPaymentMethod(method: string) {
+    setPaymentSelected((prevPaymentSelected) => {
+      if (prevPaymentSelected === method) {
+        return ''
+      } else {
+        return method
+      }
+    })
+
+    console.log(method, paymentSelected)
+  }
+
   return (
     <CenterContainerFlex>
       <ColumnContainer width={60}>
@@ -69,16 +84,26 @@ export function Checkout() {
           </HeadSectionCheckout>
 
           <ButtonPaymentContainer>
-            <ButtonPayment>
-              <CreditCard /> Cartão de crédito
+            <ButtonPayment
+              className={paymentSelected === 'credit-card' ? 'btn-active' : ''}
+              onClick={() => handleSetPaymentMethod('credit-card')}
+            >
+              <CreditCard className="iconBtnBuy" />
+              Cartão de crédito
             </ButtonPayment>
 
-            <ButtonPayment>
-              <Bank /> Cartão de Débito
+            <ButtonPayment
+              className={paymentSelected === 'debit-card' ? 'btn-active' : ''}
+              onClick={() => handleSetPaymentMethod('debit-card')}
+            >
+              <Bank className="iconBtnBuy" /> Cartão de Débito
             </ButtonPayment>
 
-            <ButtonPayment>
-              <Money /> Dinheiro
+            <ButtonPayment
+              className={paymentSelected === 'cash' ? 'btn-active' : ''}
+              onClick={() => handleSetPaymentMethod('cash')}
+            >
+              <Money className="iconBtnBuy" /> Dinheiro
             </ButtonPayment>
           </ButtonPaymentContainer>
         </FundoSectionCheckout>

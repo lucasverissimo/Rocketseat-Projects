@@ -1,11 +1,21 @@
+import { useState, useEffect } from 'react'
+
 import { CenterContainer, TitleSection } from '../../styles/global'
 import { BackgroundBanner, RowProducts } from './style'
 
-import { Product } from '../../components/Product'
+import { Product, ProductProps } from '../../components/Product'
 
 import BannerContent from '../../assets/info-banner-home.png'
 
+import { arrListProducts } from './listproducts.mock'
+
 export function Home() {
+  const [listProducts, setListProducts] = useState<ProductProps[]>([])
+
+  useEffect(() => {
+    setListProducts(arrListProducts)
+  }, [listProducts])
+
   return (
     <>
       <BackgroundBanner>
@@ -22,8 +32,8 @@ export function Home() {
       <CenterContainer>
         <TitleSection>Nossos cafés</TitleSection>
         <RowProducts>
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((product) => {
-            return <Product key={product} />
+          {listProducts.map((product) => {
+            return <Product key={product.id} {...product} />
           })}
         </RowProducts>
       </CenterContainer>

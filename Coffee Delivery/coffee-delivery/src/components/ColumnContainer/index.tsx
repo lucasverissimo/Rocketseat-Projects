@@ -3,15 +3,15 @@ import { ColumnType, ColumnContainerDiv } from './style'
 
 export const ColumnContainer: React.FC<ColumnType> = ({
   width,
-  widthTablet,
-  widthMobile,
+  widthtablet,
+  widthmobile,
   children,
 }) => {
   return (
     <ColumnContainerDiv
       width={width}
-      widthTablet={widthTablet || 100}
-      widthMobile={widthMobile || 100}
+      widthtablet={widthtablet || 100}
+      widthmobile={widthmobile || 100}
     >
       {children}
     </ColumnContainerDiv>
